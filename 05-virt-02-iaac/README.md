@@ -48,7 +48,7 @@ Ansible отличается простотой использования, им
 - Vagrant
 - Ansible
 Приложить вывод команд установленных версий каждой из программ, оформленный в markdown.
-![version](https://github.com/juls-blekh/-virt-homeworks/tree/main/img/Version_vbox_ansible_vagrant.png)
+![version](https://github.com/juls-blekh/-virt-homeworks/blob/main/img/Version_vbox_ansible_vagrant.png)
 
 ## Задача 4 (*)
 
@@ -56,4 +56,5 @@ Ansible отличается простотой использования, им
 
 - Создать виртуальную машину.
 - Зайти внутрь ВМ, убедиться, что Docker установлен с помощью команды
-docker ps
+
+`docker ps`
