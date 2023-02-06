@@ -27,6 +27,7 @@
 Создать собственный образ  любой операционной системы (например, ubuntu-20.04) с помощью Packer ([инструкция](https://cloud.yandex.ru/docs/tutorials/infrastructure-management/packer-quickstart))
 
 Для получения зачета вам необходимо предоставить скриншот страницы с созданным образом из личного кабинета YandexCloud.
+![result](https://https://github.com/juls-blekh/-virt-homeworks/tree/main/05-virt-04-docker%20compose/1-packer_build.png)
 
 ## Задача 2
 
@@ -34,6 +35,8 @@
 Используйте terraform код в директории ([src/terraform](https://github.com/netology-group/virt-homeworks/tree/virt-11/05-virt-04-docker-compose/src/terraform))
 
 Для получения зачета, вам необходимо предоставить вывод команды terraform apply и страницы свойств созданной ВМ из личного кабинета YandexCloud.
+![result](https://https://github.com/juls-blekh/-virt-homeworks/tree/main/05-virt-04-docker%20compose/2-node01.png)
+
 
 ## Задача 3
 
@@ -41,6 +44,7 @@
 Используйте ansible код в директории ([src/ansible](https://github.com/netology-group/virt-homeworks/tree/virt-11/05-virt-04-docker-compose/src/ansible))
 
 Для получения зачета вам необходимо предоставить вывод команды "docker ps" , все контейнеры, описанные в ([docker-compose](https://github.com/netology-group/virt-homeworks/blob/virt-11/05-virt-04-docker-compose/src/ansible/stack/docker-compose.yaml)),  должны быть в статусе "Up".
+![result](https://https://github.com/juls-blekh/-virt-homeworks/tree/main/05-virt-04-docker%20compose/3-docker ps.png)
 
 ## Задача 4
 
@@ -50,7 +54,5 @@
 4. Подождите 5-10 минут, чтобы система мониторинга успела накопить данные.
 
 Для получения зачета, вам необходимо предоставить: 
-- Скриншот работающего веб-интерфейса Grafana с текущими метриками, как на примере ниже
-<p align="center">
-  <img width="1200" height="600" src="./assets/yc_02.png">
-</p>
+- Скриншот работающего веб-интерфейса Grafana с текущими метриками
+![result](https://https://github.com/juls-blekh/-virt-homeworks/tree/main/05-virt-04-docker%20compose/4-grafana.png) 
