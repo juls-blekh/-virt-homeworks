@@ -59,9 +59,10 @@ services:
 - итоговый список БД после выполнения пунктов выше;
 - описание таблиц (describe);
 - SQL-запрос для выдачи списка пользователей с правами над таблицами test_db;
-- список пользователей с правами над таблицами test_db.
-https://github.com/juls-blekh/-virt-homeworks/upload/main/06-db-01-basics/img
-
+- список пользователей с правами над таблицами test_db.  
+![list](https://github.com/juls-blekh/-virt-homeworks/blob/main/06-db-02-sql/img/2.1-%20list%20db.png)  
+![list](https://github.com/juls-blekh/-virt-homeworks/blob/main/06-db-02-sql/img/2.2-tables.png)   
+![list](https://github.com/juls-blekh/-virt-homeworks/blob/main/06-db-02-sql/img/2.3-select.png)
 ## Задача 3
 
 Используя SQL-синтаксис, наполните таблицы следующими тестовыми данными:
@@ -93,7 +94,7 @@ https://github.com/juls-blekh/-virt-homeworks/upload/main/06-db-01-basics/img
 
     - запросы,
     - результаты их выполнения.
-
+![list](https://github.com/juls-blekh/-virt-homeworks/blob/main/06-db-02-sql/img/3-insert.png)
 ## Задача 4
 
 Часть пользователей из таблицы clients решили оформить заказы из таблицы orders.
@@ -110,23 +111,39 @@ https://github.com/juls-blekh/-virt-homeworks/upload/main/06-db-01-basics/img
 
 Приведите SQL-запрос для выдачи всех пользователей, которые совершили заказ, а также вывод этого запроса.
  
-Подсказка: используйте директиву `UPDATE`.
+Подсказка: используйте директиву `UPDATE`.  
+![list](https://github.com/juls-blekh/-virt-homeworks/blob/main/06-db-02-sql/img/4-update.png)
 
 ## Задача 5
 
 Получите полную информацию по выполнению запроса выдачи всех пользователей из задачи 4 
 (используя директиву EXPLAIN).
 
-Приведите получившийся результат и объясните, что значат полученные значения.
+Приведите получившийся результат и объясните, что значат полученные значения.  
+![list](https://github.com/juls-blekh/-virt-homeworks/blob/main/06-db-02-sql/img/5-explain.png)  
+EXPLAIN - план выполнения запроса, в данном случае SELECT. Результат - оценка стоимости выполнения запроса; ожидаемое число строк, которое должен вывести этот узел плана; ожидаемый средний размер строк, выводимых этим узлом плана (в байтах). Используется для оптимизации БД.
 
 ## Задача 6
 
-Создайте бэкап БД test_db и поместите его в volume, предназначенный для бэкапов (см. задачу 1).
+Создайте бэкап БД test_db и поместите его в volume, предназначенный для бэкапов (см. задачу 1).    
+```
+pg_dumpall > /backup/db.out
+```
+Остановите контейнер с PostgreSQL, но не удаляйте volumes.     
+```
+docker-compose down
+```
+(volume postgresql_data все-таки надо удалить (при восстановлении бэкапа выходит сообщение, что БД уже существует)  
+```
+docker volume rm postgresql_data
+```
 
-Остановите контейнер с PostgreSQL, но не удаляйте volumes.
-
-Поднимите новый пустой контейнер с PostgreSQL.
-
-Восстановите БД test_db в новом контейнере.
+Поднимите новый пустой контейнер с PostgreSQL.   
+```
+docker-compose up
+```
+Восстановите БД test_db в новом контейнере.  
+![list](https://github.com/juls-blekh/-virt-homeworks/blob/main/06-db-02-sql/img/6.1_backup.png)    
+![list](https://github.com/juls-blekh/-virt-homeworks/blob/main/06-db-02-sql/img/6-tables.png) 
 
 Приведите список операций, который вы применяли для бэкапа данных и восстановления. 
