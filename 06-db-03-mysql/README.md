@@ -21,8 +21,7 @@
 Подключитесь к восстановленной БД и получите список таблиц из этой БД.
 
 **Приведите в ответе** количество записей с `price` > 300.
-
-
+![list](https://github.com/juls-blekh/-virt-homeworks/blob/main/06-db-03-mysql/img/1-status.png)    
 В следующих заданиях мы будем продолжать работу с этим контейнером.
 
 ## Задача 2
@@ -41,7 +40,7 @@
     
 Используя таблицу INFORMATION_SCHEMA.USER_ATTRIBUTES, получите данные по пользователю `test` и 
 **приведите в ответе к задаче**.
-
+![list](https://github.com/juls-blekh/-virt-homeworks/blob/main/06-db-03-mysql/img/2.2-grant.png)  
 ## Задача 3
 
 Установите профилирование `SET profiling = 1`.
@@ -52,7 +51,7 @@
 Измените `engine` и **приведите время выполнения и запрос на изменения из профайлера в ответе**:
 - на `MyISAM`,
 - на `InnoDB`.
-
+![list](https://github.com/juls-blekh/-virt-homeworks/blob/main/06-db-03-mysql/img/3-show_profiles.png)  
 ## Задача 4 
 
 Изучите файл `my.cnf` в директории /etc/mysql.
@@ -66,7 +65,7 @@
 - размер файла логов операций 100 Мб.
 
 Приведите в ответе изменённый файл `my.cnf`.
-
+![list](https://github.com/juls-blekh/-virt-homeworks/blob/main/06-db-03-mysql/img/4.1-my.cnf.png) 
 ---
 
 ### Как оформить ДЗ
