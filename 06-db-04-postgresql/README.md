@@ -51,7 +51,7 @@
 Используя утилиту `pg_dump`, создайте бекап БД `test_database`.  
 ![img](https://github.com/juls-blekh/-virt-homeworks/blob/main/06-db-04-postgresql/img/4-dump.png)  
 Как бы вы доработали бэкап-файл, чтобы добавить уникальность значения столбца `title` для таблиц `test_database`?
-- Добавление индекса 
+- можно доработать бэкап-файл до секционирования таблицы orders - добавление свойства UNIQUE столбцу title
 
 ---
 
