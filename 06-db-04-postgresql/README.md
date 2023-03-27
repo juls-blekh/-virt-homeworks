@@ -53,6 +53,7 @@
 Как бы вы доработали бэкап-файл, чтобы добавить уникальность значения столбца `title` для таблиц `test_database`?
 - можно доработать бэкап-файл до секционирования таблицы orders - добавление свойства UNIQUE столбцу title
 
+![img](https://github.com/juls-blekh/-virt-homeworks/blob/main/06-db-04-postgresql/img/4.2-unique.png)  
 ---
 
 ### Как cдавать задание
