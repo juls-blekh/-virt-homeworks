@@ -54,7 +54,8 @@ https://console.cloud.yandex.ru/folders/<ваш cloud_id>/vpc/security-groups
 
 1. Создайте в корне проекта файл 'vms_platform.tf' . Перенесите в него все переменные ВМ.
 2. Скопируйте блок ресурса и создайте с его помощью вторую ВМ: **"netology-develop-platform-db"** ,  cores  = 2, memory = 2, core_fraction = 20. Объявите ее переменные с префиксом **vm_db_** в том же файле.
-3. Примените изменения.
+3. Примените изменения.  
+4. ![img](https://github.com/juls-blekh/-virt-homeworks/blob/main/ter-homeworks02/img/4-2vm.png)
 
 
 ### Задание 4
