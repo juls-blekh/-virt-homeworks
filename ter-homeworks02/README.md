@@ -98,7 +98,7 @@ https://console.cloud.yandex.ru/folders/<ваш cloud_id>/vpc/security-groups
 4. Напишите interpolation выражение, результатом которого будет: "John is admin for production server based on OS ubuntu-20-04 with X vcpu, Y ram and Z virtual disks", используйте данные из переменных test_list, test_map, servers и функцию length() для подстановки значений.
 
 В качестве решения предоставьте необходимые команды и их вывод.
-![img](https://github.com/juls-blekh/-virt-homeworks/blob/main/ter-homeworks02/img/6-console.png)
+![img](https://github.com/juls-blekh/-virt-homeworks/blob/main/ter-homeworks02/img/6-tconsole.png)
 ------
 ### Правила приема работы
 
