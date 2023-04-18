@@ -29,13 +29,9 @@ resource "yandex_compute_instance" "security-vm" {
   }
 
   dynamic secondary_disk { 
-   for_each = [for s in var.disks-sec: {
-    disk_id = yandex_compute_disk.disk-vm[s.number].id
-   }]
-   # for_each = yandex_compute_disk.disk-vm[*].id
+    for_each = yandex_compute_disk.disk-vm.*.id
     content {
-    #  disk_id = "${each.value}"
-       disk_id = secondary_disk.value.disk_id
+       disk_id = secondary_disk.value
     } 
  }
  
@@ -49,13 +45,23 @@ resource "yandex_compute_instance" "security-vm" {
   allow_stopping_for_update = true
 }
 
-variable "disks-sec" {
-  default = [
-    {number = 0
-    disk_id = ""},
-    {number = 1
-    disk_id = ""},
-    {number = 2
-    disk_id = ""}
-  ]
-}
+
+################################ 2nd version dynamic secondary_disk
+#dynamic secondary_disk { 
+#   for_each = [for s in var.disks-sec: {disk_id = yandex_compute_disk.disk-vm[s.number].id}]
+#    content {
+#      disk_id = secondary_disk.value.disk_id
+#    } 
+# }
+
+#variable "disks-sec" {
+#  default = [
+#    {number = 0
+#    disk_id = ""},
+#    {number = 1
+#    disk_id = ""},
+#    {number = 2
+#    disk_id = ""}
+#  ]
+#}
+#####################################################################
